@@ -20,25 +20,55 @@ public interface Directory {
 	
 	
 	/**
-	 * @param name ime file
-	 * @param path putanja do file
+	 * Kreira novi direktorijum na datoj putanji.
+	 * 
+	 * @param name ime file-a
+	 * @param path putanja do file-a
+	 * 
 	 */
 	public void create(String name, String path) throws CreateDirectoryExceptions; 
 	
 	
 	/**
-	 * @param path putanja do file
+	 * Brise direktorijum sa date putanje.
+	 * 
+	 * @param path putanja do file-a
 	 */
 	public void delete(String path)throws DeleteDirectoryExceptions;
 	
 	
+	/**
+	 * Zipuje sve fajlove iz datog direktorijuma.
+	 * @param path
+	 * @throws ZipDirectoryExceptions
+	 */
 	public void zip(String path)throws ZipDirectoryExceptions;
 	
-	public void move(String pathFile, String destestination)throws MoveDirectoryExceptions;
+	/**
+	 * Premesta file sa date putanje na odredisnu putanju.
+	 * @param pathFile
+	 * @param destination
+	 * @throws MoveDirectoryExceptions
+	 */
+	public void move(String pathFile, String destination)throws MoveDirectoryExceptions;
 	
+	/**
+	 * Menja naziv direktorijuma koji je prosledjen kao parametar funkcije.
+	 * @param name
+	 * @param path
+	 * @throws RenameDirectoryExceptions
+	 */
 	public void rename(String name, String path)throws RenameDirectoryExceptions; 
 	
+	
+	/**
+	 * Ispisuje sve datoteke iz datog direktorijuma.
+	 * @param path
+	 * @return
+	 * @throws SearchDirectoryExceptions
+	 */
 	public List<File> listAllinDirectory(String path) throws SearchDirectoryExceptions;
+	
 	
 	public List<File> listAllinDirectoryInDirectory(String path)throws SearchDirectoryExceptions;
 	
