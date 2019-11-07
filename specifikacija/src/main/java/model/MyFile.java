@@ -16,7 +16,7 @@ import formatComponent.ExtensionList;
  * @author Vlado
  *
  */
-public interface File {
+public interface MyFile {
 	
 	
 	/**
@@ -62,9 +62,9 @@ public interface File {
 	
 	public void selectMutlipleFile(List<String> path) throws SelectFileExeption;
 	
-	public void uploadMultiple(List<File> files, String pathStorage, ExtensionList extensiontList) throws UploadFileExeption;
+	public void uploadMultiple(List<MyFile> files, String pathStorage, ExtensionList extensiontList) throws UploadFileExeption;
 	
-	public void uploadMultipleZip(List<File> files, String destination) throws Exception;
+	public void uploadMultipleZip(List<MyFile> files, String destination) throws Exception;
 	
 	public void zip(String path)throws ZipFilesExeption;
 	
