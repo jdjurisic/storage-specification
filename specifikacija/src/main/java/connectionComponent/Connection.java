@@ -3,6 +3,7 @@ package connectionComponent;
 import formatComponent.ExtensionHandler;
 import formatComponent.ExtensionList;
 import model.MyPath;
+import usersComponent.User;
 import usersComponent.UserDatabase;
 
 /**
@@ -38,7 +39,7 @@ public UserDatabase getUsers();
 
 public ExtensionList getExtension();
 
-public int getLogin();
+public User getLogin();
 
 }
 
