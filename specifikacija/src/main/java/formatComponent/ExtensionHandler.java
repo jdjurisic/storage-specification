@@ -6,13 +6,13 @@ package formatComponent;
  * @author Jovica
  *
  */
-public interface FormatHandler {
+public interface ExtensionHandler {
 	
 	/**
 	 * Prima putanju skladista i pravi json koji sluzi za cuvanje podataka o nedozvoljenim formatima.
 	 * @param Putanja na kojoj se kreira json.
 	 */
-	public void createNewFormatList(String path);
+	public void createNewExtensionsList(String path);
 	
 	
 	/**
@@ -20,12 +20,12 @@ public interface FormatHandler {
 	 * @param Putanja do jsona koji sadrzi podatke o ekstenzijama.
 	 * @return Vraca listu formata ucitanu iz fajla.
 	 */
-	public FormatList readFormats(String path);
+	public ExtensiontList readExtensions(String path);
 	
 	/**
 	 * Metoda koja listu iz operativnog rada cuva na zadatoj putanji.
 	 * @param Putanja na kojoj se cuva fajl.
 	 * @param Lista formata koju zelimo da sacuvamo.
 	 */
-	public void saveFormats(String path,FormatList fl);
+	public void saveExtensions(String path,ExtensiontList fl);
 }

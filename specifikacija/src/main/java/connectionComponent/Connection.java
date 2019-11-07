@@ -1,5 +1,9 @@
 package connectionComponent;
 
+import formatComponent.ExtensionHandler;
+import model.MyPath;
+import usersComponent.UserDatabase;
+
 /**
  * Komponenta odgovorna za povezivanje na skladiste,prekidanje veze sa skladistem,kao i kreaciju skladista.
  * @author Jovica
@@ -18,13 +22,22 @@ public void createNewStorage(String path);
  * Metoda koja se koristi za povezivanje na skladiste.
  * @param Putanja do skladista.
  */
-public void connectToStorage(String path);
+public void connectToStorage();
 
 /**
  * Prekida konekciju sa skladistem i obezbedjuje konzistentnost korisnickih podataka prilikom zatvaranja konekcije.
  * @param Putanja do skladista.
  */
-public void disconnectFromStorage(String path);
+public void disconnectFromStorage();
+
+
+public MyPath getMyPath();
+
+public UserDatabase getUsers();
+
+public ExtensionHandler getExtension();
+
+public int getLogin();
 
 }
 

@@ -14,6 +14,14 @@ public class User {
 	private boolean dozvolaZaSnimanje;
 	private boolean dozvolaZaBrisanje;
 	private boolean dozvolaZaPreuzimanje;
+	
+	
+	
+	public User(String username, String password) {
+		this.username = username;
+		this.password = password;
+	}
+	
 	public String getUsername() {
 		return username;
 	}
@@ -66,9 +74,7 @@ public class User {
 				+ ", dozvolaZaSnimanje=" + dozvolaZaSnimanje + ", dozvolaZaBrisanje=" + dozvolaZaBrisanje
 				+ ", dozvolaZaPreuzimanje=" + dozvolaZaPreuzimanje + "]";
 	}
-	public User() {
-		
-	}
+	
 	
 	
 	

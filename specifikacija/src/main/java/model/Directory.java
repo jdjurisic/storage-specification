@@ -82,6 +82,40 @@ public interface Directory {
 	
 	public List<File> listAllinDirectoryWithoutMetadata(String path)throws SearchDirectoryExceptions;
 	
+	/**
+	 * Preuzima direktorijum sa prosledjenog path-a.
+	 *
+	 * @param src  putanja do direktorijuma.
+	 * @param dest gde zelimo da sacuvamo preuzeti direktorijum.
+	 */
+	public void download(String src, String dest);
+	/**
+	 * Upload-uje direktorijum na zadatoj putanji.
+	 *
+	 * @param src  putanja direktorijuma na skladistu.
+	 * @param dest odrediste 
+	 */
+	public void upload(String src, String dest);
+
+	/**
+	 * Upload-uje vise direktorijuma na zeljenu putanju.
+	 *
+	 * @param directories List of directories.
+	 * @param dest        Path on the storage where we want to upload directories.
+	 * @param name        Name of created zip.
+	 */
+	public void uploadMultiple(List<File> directories, String dest, String name);
+
+	/**
+	 * Uploads multiple zipped directories on given path in storage.
+	 *
+	 * @param directories List of directories.
+	 * @param dest        Path on the storage where we want to upload zipped directories.
+	 * @param name        Name of created zip
+	 */
+	public void uploadMultipleZip(List<File> directories, String dest, String name);
+
+	
 	
 	
 	

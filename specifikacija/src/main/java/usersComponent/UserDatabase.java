@@ -13,10 +13,16 @@ public class UserDatabase {
 	public ArrayList<User> getUsers() {
 		return users;
 	}
+	
+	
+	
 
 	public void setUsers(ArrayList<User> users) {
 		this.users = users;
 	}
+
+
+
 
 	public UserDatabase(ArrayList<User> users) {
 		super();
