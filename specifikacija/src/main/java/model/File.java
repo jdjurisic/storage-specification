@@ -58,11 +58,11 @@ public interface File {
 	 * @param pathStorage
 	 * @throws UploadFileExeption
 	 */
-	public void upload(String pathDesktop, String pathStorage) throws UploadFileExeption;
+	public void upload(String pathDesktop, String pathStorage, ExtensionList extensiontList) throws UploadFileExeption;
 	
 	public void selectMutlipleFile(List<String> path) throws SelectFileExeption;
 	
-	public void uploadMultiple(List<File> files, String pathStorage) throws UploadFileExeption;
+	public void uploadMultiple(List<File> files, String pathStorage, ExtensionList extensiontList) throws UploadFileExeption;
 	
 	public void uploadMultipleZip(List<File> files, String destination) throws Exception;
 	
