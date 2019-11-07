@@ -11,12 +11,12 @@ import exceptions.directory.MoveDirectoryExceptions;
 import exceptions.directory.RenameDirectoryExceptions;
 import exceptions.directory.SearchDirectoryExceptions;
 import exceptions.directory.ZipDirectoryExceptions;
-
+import model.MyFile;
 /**
  * @author Vlado
  *
  */
-public interface Directory {
+public interface MyDirectory {
 	
 	
 	/**
@@ -67,20 +67,20 @@ public interface Directory {
 	 * @return
 	 * @throws SearchDirectoryExceptions
 	 */
-	public List<File> listAllinDirectory(String path) throws SearchDirectoryExceptions;
+	public List<MyFile> listAllinDirectory(String path) throws SearchDirectoryExceptions;
 	
 	
-	public List<File> listAllinDirectoryInDirectory(String path)throws SearchDirectoryExceptions;
+	public List<MyFile> listAllinDirectoryInDirectory(String path)throws SearchDirectoryExceptions;
 	
-	public List<File> listAllFileinDirectory(String path)throws SearchDirectoryExceptions;
+	public List<MyFile> listAllFileinDirectory(String path)throws SearchDirectoryExceptions;
 	
-	public List<File> listAllinDirectoryAndSubdirectory(String path)throws SearchDirectoryExceptions;
+	public List<MyFile> listAllinDirectoryAndSubdirectory(String path)throws SearchDirectoryExceptions;
 	
-	public List<File> listAllinDirectoryWithExtension(String path, String extension)throws SearchDirectoryExceptions;
+	public List<MyFile> listAllinDirectoryWithExtension(String path, String extension)throws SearchDirectoryExceptions;
 	
-	public List<File> listAllinDirectoryWithMetadata(String path)throws SearchDirectoryExceptions;
+	public List<MyFile> listAllinDirectoryWithMetadata(String path)throws SearchDirectoryExceptions;
 	
-	public List<File> listAllinDirectoryWithoutMetadata(String path)throws SearchDirectoryExceptions;
+	public List<MyFile> listAllinDirectoryWithoutMetadata(String path)throws SearchDirectoryExceptions;
 	
 	/**
 	 * Preuzima direktorijum sa prosledjenog path-a.
@@ -104,7 +104,7 @@ public interface Directory {
 	 * @param dest        Path on the storage where we want to upload directories.
 	 * @param name        Name of created zip.
 	 */
-	public void uploadMultiple(List<File> directories, String dest, String name);
+	public void uploadMultiple(List<MyFile> directories, String dest, String name);
 
 	/**
 	 * Uploads multiple zipped directories on given path in storage.
@@ -113,7 +113,7 @@ public interface Directory {
 	 * @param dest        Path on the storage where we want to upload zipped directories.
 	 * @param name        Name of created zip
 	 */
-	public void uploadMultipleZip(List<File> directories, String dest, String name);
+	public void uploadMultipleZip(List<MyFile> directories, String dest, String name);
 
 	
 	
