@@ -20,12 +20,12 @@ public interface ExtensionHandler {
 	 * @param Putanja do jsona koji sadrzi podatke o ekstenzijama.
 	 * @return Vraca listu formata ucitanu iz fajla.
 	 */
-	public ExtensiontList readExtensions(String path);
+	public ExtensionList readExtensions(String path);
 	
 	/**
 	 * Metoda koja listu iz operativnog rada cuva na zadatoj putanji.
 	 * @param Putanja na kojoj se cuva fajl.
 	 * @param Lista formata koju zelimo da sacuvamo.
 	 */
-	public void saveExtensions(String path,ExtensiontList fl);
+	public void saveExtensions(String path,ExtensionList fl);
 }

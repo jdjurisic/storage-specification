@@ -7,15 +7,15 @@ import java.util.ArrayList;
  * @author Jovica
  *
  */
-public class ExtensiontList {
+public class ExtensionList {
 	private ArrayList<String> extensionList = new ArrayList<String>();
 
-	public ExtensiontList(ArrayList<String> formatList) {
+	public ExtensionList(ArrayList<String> formatList) {
 		super();
 		this.extensionList = formatList;
 	}
 
-	public ExtensiontList() {
+	public ExtensionList() {
 		super();
 	}
 

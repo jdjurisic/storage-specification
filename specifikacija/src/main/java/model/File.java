@@ -10,7 +10,7 @@ import exceptions.file.RenameFileExeption;
 import exceptions.file.SelectFileExeption;
 import exceptions.file.UploadFileExeption;
 import exceptions.file.ZipFilesExeption;
-import formatComponent.ExtensiontList;
+import formatComponent.ExtensionList;
 
 /**
  * @author Vlado
@@ -24,7 +24,7 @@ public interface File {
 	 * @param name ime file
 	 * @param path putanja do file
 	 */
-	public void create(String name, String path, ExtensiontList extensiontList) throws CreateFileException; 
+	public void create(String name, String path, ExtensionList extensiontList) throws CreateFileException; 
 	
 	
 	/**
@@ -33,7 +33,7 @@ public interface File {
 	 * @param path
 	 * @throws CreateFileException
 	 */
-	public void createWithMetadata(String name, String path, ExtensiontList extensiontList) throws CreateFileException;
+	public void createWithMetadata(String name, String path, ExtensionList extensiontList) throws CreateFileException;
 	
 	
 	/**
