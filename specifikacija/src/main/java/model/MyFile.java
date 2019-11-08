@@ -60,11 +60,9 @@ public interface MyFile {
 	 */
 	public void upload(String pathDesktop, String pathStorage, ExtensionList extensiontList) throws UploadFileExeption;
 	
-	public void selectMutlipleFile(List<String> path) throws SelectFileExeption;
+	public void uploadMultiple(List<String> files, String pathStorage, ExtensionList extensiontList) throws UploadFileExeption;
 	
-	public void uploadMultiple(List<MyFile> files, String pathStorage, ExtensionList extensiontList) throws UploadFileExeption;
-	
-	public void uploadMultipleZip(List<MyFile> files, String destination) throws Exception;
+	public void uploadMultipleZip(List<String> files, String destination) throws Exception;
 	
 	public void zip(String path)throws ZipFilesExeption;
 	

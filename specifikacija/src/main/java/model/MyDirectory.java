@@ -98,22 +98,13 @@ public interface MyDirectory {
 	public void upload(String src, String dest);
 
 	/**
-	 * Upload-uje vise direktorijuma na zeljenu putanju.
-	 *
-	 * @param directories List of directories.
-	 * @param dest        Path on the storage where we want to upload directories.
-	 * @param name        Name of created zip.
-	 */
-	public void uploadMultiple(List<MyFile> directories, String dest, String name);
-
-	/**
 	 * Uploads multiple zipped directories on given path in storage.
 	 *
 	 * @param directories List of directories.
 	 * @param dest        Path on the storage where we want to upload zipped directories.
 	 * @param name        Name of created zip
 	 */
-	public void uploadMultipleZip(List<MyFile> directories, String dest, String name);
+	public void uploadMultipleZip(List<String> directories, String dest, String name);
 
 	
 	
