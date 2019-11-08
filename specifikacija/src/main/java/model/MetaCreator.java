@@ -42,7 +42,7 @@ public class MetaCreator {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		myScanner.close();
+		
 	}
 	
 	
