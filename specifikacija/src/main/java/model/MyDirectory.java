@@ -24,7 +24,7 @@ public interface MyDirectory {
 	 * 
 	 * @param name ime file-a
 	 * @param path putanja do file-a
-	 * 
+	 * @throws CreateDirectoryExceptions ukoliko je kreiranje neuspesno.
 	 */
 	public void create(String name, String path) throws CreateDirectoryExceptions; 
 	
@@ -39,23 +39,23 @@ public interface MyDirectory {
 	
 	/**
 	 * Zipuje sve fajlove iz datog direktorijuma.
-	 * @param path
+	 * @param path putanja do direktorijuma koji se zipuje.
 	 * @throws ZipDirectoryExceptions
 	 */
 	public void zip(String path)throws ZipDirectoryExceptions;
 	
 	/**
 	 * Premesta file sa date putanje na odredisnu putanju.
-	 * @param pathFile
-	 * @param destination
-	 * @throws MoveDirectoryExceptions
+	 * @param pathFile putanja do fajla koji premestamo
+	 * @param destination odredisna putanja
+	 * @throws MoveDirectoryExceptions ukoliko dodje do greske prilikom premestanja.
 	 */
 	public void move(String pathFile, String destination)throws MoveDirectoryExceptions;
 	
 	/**
 	 * Menja naziv direktorijuma koji je prosledjen kao parametar funkcije.
-	 * @param name
-	 * @param path
+	 * @param name naziv direktorijuma
+	 * @param path putanja do direktorjuma
 	 * @throws RenameDirectoryExceptions
 	 */
 	public void rename(String name, String path)throws RenameDirectoryExceptions; 
@@ -63,9 +63,9 @@ public interface MyDirectory {
 	
 	/**
 	 * Ispisuje sve datoteke iz datog direktorijuma.
-	 * @param path
-	 * @return
-	 * @throws SearchDirectoryExceptions
+	 * @param path putanja do direkt.
+	 * @return listu svih fajlova u direkt.
+	 * @throws SearchDirectoryExceptions ukoliko dodje do greske prilikom pretrage.
 	 */
 	public List<MyFile> listAllinDirectory(String path) throws SearchDirectoryExceptions;
 	

@@ -29,8 +29,8 @@ public interface MyFile {
 	
 	/**
 	 * Pravi novi fajl sa proizvoljnim metapodacima.
-	 * @param name
-	 * @param path
+	 * @param name naziv fajla.
+	 * @param path putanja na kojoj se kreira.
 	 * @throws CreateFileException
 	 */
 	public void createWithMetadata(String name, String path, ExtensionList extensiontList) throws CreateFileException;
@@ -39,25 +39,20 @@ public interface MyFile {
 	/**
 	 * Brise fajl sa prosledjene putanje.
 	 * @param path putanja do file
+	 * @throws DeleteFileExeption greska prilkom birsanja.
 	 */
 	public void delete(String path) throws DeleteFileExeption;
 	
 	
 	/**
 	 * Preuzima fajl sa prosledjene putanje i cuva ga na proizvoljnu lokaciju.Default implementacija cuva na desktopu.
-	 * @param pathStorage
-	 * @param pathDesktop
-	 * @throws DownloadFileExeption
+	 * @param pathStorage putanja do fajla.
+	 * @param pathDesktop putanja do skladista.
+	 * @throws DownloadFileExeption greska prilikom preuzimanja.
 	 */
 	public void download(String pathStorage, String pathDesktop)throws DownloadFileExeption;
 	
-	
-	/**
-	 * 
-	 * @param pathDesktop
-	 * @param pathStorage
-	 * @throws UploadFileExeption
-	 */
+
 	public void upload(String pathDesktop, String pathStorage, ExtensionList extensiontList) throws UploadFileExeption;
 	
 	public void uploadMultiple(List<String> files, String pathStorage, ExtensionList extensiontList) throws UploadFileExeption;
@@ -69,26 +64,26 @@ public interface MyFile {
 	
 	/**
 	 * Premesta fajl sa prosledjene putanje na zadatu putanju.
-	 * @param pathFile
-	 * @param destination
-	 * @throws MoveFileExeption
+	 * @param pathFile putanja do fajla koji premestamo.
+	 * @param destination odredisna putanja.
+	 * @throws MoveFileExeption greska prilikom premestanja.
 	 */
 	public void move(String pathFile, String destination) throws MoveFileExeption;
 	
 	
 	/**
 	 * Premesta fajl(sa metapodacima) sa prosledjene putanje na zadatu putanju.
-	 * @param pathFile
-	 * @param destination
-	 * @throws MoveFileExeption
+	 * @param pathFile putanja do fajla.
+	 * @param destination odredisna putanja.
+	 * @throws MoveFileExeption greska prilkom premestanja.
 	 */
 	public void moveWithMetadata(String pathFile, String destination) throws MoveFileExeption;
 	
 	
 	/**
 	 * Menja naziv fajla na zadatoj putanji u prosledjenu vrednost.
-	 * @param name
-	 * @param path
+	 * @param name naziv fajla.
+	 * @param path putanja do fajla.
 	 * @throws RenameFileExeption
 	 */
 	public void rename(String name, String path)throws RenameFileExeption; 
